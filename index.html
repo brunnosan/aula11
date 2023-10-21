@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="mega" class="start"></div>
+    <!-- <button type="submit" onclick="corre()"><span>Pega!</span></button> -->
+    <button id="corre"><span>Pega!</span></button>
+    <button onclick="restart()"><span>Restart!</span></button>
+</body>
+<script>
+    function corre() {
+        // document.querySelector("#mega").className="run";
+        mega.className="runRight";
+    };
+    function restart() {
+        // document.querySelector("#mega").className="start";
+        mega.classList.remove('runRight');
+        mega.classList.add('start');
+        return;
+    }
+    addEventListener('keydown', (e) => {
+        if(e.key === 'ArrowRight') {
+            mega.classList.remove('start');
+            mega.classList.add('runRight');
+            return;
+        }
+        if(e.key === 'ArrowLeft') {
+            mega.classList.remove('runRight');
+            mega.classList.add('runLeft');
+            return;
+        }
+        if(e.key === ' ') {
+            mega.classList.remove('run');
+            mega.classList.add('start');
+            return;
+        }
+    })
+</script>
+</html>
