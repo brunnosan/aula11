@@ -5,38 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 11</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/back.css">
+    <link rel="stylesheet" href="css/megaman.css">
 </head>
 <body>
+    <div id="back" class="start"></div>
     <div id="mega" class="start"></div>
-    <!-- <button type="submit" onclick="corre()"><span>Pega!</span></button> -->
-    <button id="corre"><span>Pega!</span></button>
-    <button onclick="restart()"><span>Restart!</span></button>
 </body>
 <script>
-    function corre() {
-        // document.querySelector("#mega").className="run";
-        mega.className="runRight";
-    };
-    function restart() {
-        // document.querySelector("#mega").className="start";
-        mega.classList.remove('runRight');
-        mega.classList.add('start');
-        return;
-    }
-    addEventListener('keydown', (e) => {
+    evento = 'start';
+    addEventListener('keyup', (e) => {
         if(e.key === 'ArrowRight') {
-            mega.classList.remove('start');
-            mega.classList.add('runRight');
+            mega.classList.remove(evento);
+            back.classList.remove(evento);
+            evento='runRight';
+            back.classList.add(evento)
+            mega.classList.add(evento);
             return;
         }
         if(e.key === 'ArrowLeft') {
-            mega.classList.remove('runRight');
-            mega.classList.add('runLeft');
+            mega.classList.remove(evento);
+            back.classList.remove(evento);
+            evento='runLeft';
+            back.classList.add(evento);
+            mega.classList.add(evento);
             return;
         }
         if(e.key === ' ') {
-            mega.classList.remove('run');
-            mega.classList.add('start');
+            mega.classList.remove(evento);
+            back.classList.remove(evento);
+            evento='start';
+            back.classList.add(evento);
+            mega.classList.add(evento);
             return;
         }
     })
