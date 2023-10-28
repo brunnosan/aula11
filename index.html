@@ -15,9 +15,9 @@
         <p>
             Reiniciar: Esc<br>
             Direções: <br>
-            <i class="fa-solid fa-up-long"></i><br>
-            <i class="fa-solid fa-left-long"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-right-long"></i><br>
-            <i class="fa-solid fa-down-long"></i><br>
+            <button id="up"><i class="fa-solid fa-up-long"></i></button><br>
+            <button id="left"><i class="fa-solid fa-left-long"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="right"><i class="fa-solid fa-right-long"></i></button><br>
+            <button id="down"><i class="fa-solid fa-down-long"></i></button><br>
         </p>
     </div>
     <div id="back" class="start"></div>
@@ -33,8 +33,29 @@
             back.classList.add(evento);
         }, 1000);
         return;
-    })
-    addEventListener('keyup', (e) => {
+    });
+
+    document.querySelector("#up").addEventListener("click", () => { 
+        document.dispatchEvent(new KeyboardEvent("keyup", { key: "ArrowUp" }));
+        return;
+    });
+
+    document.querySelector("#right").addEventListener("click", () => { 
+        document.dispatchEvent(new KeyboardEvent("keyup", { key: "ArrowRight" }));
+        return;
+    });
+
+    document.querySelector("#left").addEventListener("click", () => { 
+        document.dispatchEvent(new KeyboardEvent("keyup", { key: "ArrowLeft" }));
+        return;
+    });
+
+    document.querySelector("#down").addEventListener("click", () => { 
+        document.dispatchEvent(new KeyboardEvent("keyup", { key: "ArrowDown" }));
+        return;
+    });
+
+    document.addEventListener('keyup', (e) => {
         if(e.key === 'Escape') {
             mega.classList.remove(mega.className);
             back.classList.remove(back.className);
