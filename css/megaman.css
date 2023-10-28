@@ -1,201 +1,353 @@
 #mega {
-    position: absolute;
-    left: 50%;
-    top: 450px;
-    /* margin-bottom: 100px; */
+    position: relative;
+    margin: 0 auto;
+    top: 440px;
     z-index: 2;
     background-image: url('../images/megaman.gif');
-    /* start */
-    /* width: 25px;
-    height: 55px;
-    background-position: -143px 0px;
-    animation-fill-mode: forwards;
-    animation: start linear 1 1500ms; */
-    /* running */
-    /* width: 20px;
-    height: 43px;
-    background-position: -103px -111px;
-    animation: run linear infinite 1s; */
+    /* background-color: lightgray; */
     background-repeat: no-repeat;
     transform: scale(3,3);
-    /* border: 1px solid red; */
+}
+
+#mega.stopRight {
+    top: 440px;
+    width: 32px;
+    height: 50px;
+    background-position: -268px -3px;
+}
+
+#mega.stopLeft {
+    top: 440px;
+    width: 32px;
+    height: 50px;
+    background-position: -268px -3px;
+    transform: scale(-3,3);
 }
 
 #mega.start {
-    width: 25px;
-    height: 55px;
-    background-position: -143px 0px;
-    animation: start linear 1 1500ms;
+    height: 50px;
+    width: 10px;
+    background-position: -151px -3px;
+    animation: start linear 1 750ms;
     animation-fill-mode: forwards;
 }
 
 #mega.runRight {
-    width: 20px;
-    height: 43px;
-    background-position: -103px -111px;
-    animation: run linear infinite 1s;
-    transform: scale(3,3);
+    top: 452px;
+    width: 22px;
+    height: 44px;
+    background-position: -102px -109px;
+    animation: run linear infinite 1000ms;
+    animation-fill-mode: forwards;
 }
 
 #mega.runLeft {
-    width: 20px;
-    height: 43px;
-    background-position: -103px -111px;
-    animation: run linear infinite 1s;
+    top: 452px;
+    width: 22px;
+    height: 44px;
+    background-position: -102px -109px;
+    animation: run linear infinite 1000ms;
+    animation-fill-mode: forwards;
+    transform: scale(-3,3);
+}
+
+#mega.jumpRight {
+    top: 439px;
+    width: 26px;
+    height: 50px;
+    background-position: -174px -59px;
+    animation: jump linear 1 1000ms;
+    animation-fill-mode: forwards;
+}
+
+#mega.jumpLeft {
+    top: 439px;
+    width: 26px;
+    height: 50px;
+    background-position: -174px -59px;
+    animation: jump linear 1 1000ms;
+    animation-fill-mode: forwards;
     transform: scale(-3,3);
 }
 
 @keyframes start {
     0% {
-        position: absolute;
-        top: 0;
-        width: 25px;
-        background-position: -143px 0px;
+        top: 240px;
+        width: 10px;
+        background-position: -151px -3px;
     }
-    /* 5% {
-        width: 25px;
-        position: absolute;
-        top: 5px;
-        background-position: -143px 0px;
-    } */
-    10% {
-        width: 25px;
-        position: absolute;
-        top: 5px;
-        background-position: -143px 0px;
+    12.5% {
+        top: 340px;
+        width: 10px;
+        background-position: -151px -3px;
     }
-    /* 15% {
-        width: 25px;
-        position: absolute;
-        top: 5px;
-        background-position: -143px 0px;
-    } */
-    19.999% {
-        position: absolute;
-        top: 5px;
-        width: 25px;
-        background-position: -143px 0px;
+    25% {
+        top: 440px;
+        width: 10px;
+        background-position: -151px -3px;
     }
-    20% {
-        position: relative;
-        align-content: center;
-        width: 27px;
-        background-position: -166px 0px;
+    37.49% {
+        top: 440px;
+        width: 10px;
+        background-position: -151px -3px;
     }
-    39.999% {
-        width: 27px;
-        background-position: -166px 0px;
+    37.5% {
+        top: 440px;
+        width: 24px;
+        background-position: -167px -3px;
     }
-    40% {
-        position: relative;
-        align-content: center;
-        width: 34px;
-        background-position: -195px 0px;
+    49.99% {
+        top: 440px;
+        width: 24px;
+        background-position: -167px -3px;
     }
-    59.999% {
-        width: 34px;
-        background-position: -195px 0px;
+    50% {
+        top: 440px;
+        width: 32px;
+        background-position: -195px -3px;
     }
-    60% {
-        width: 34px;
-        background-position: -231px 0px;
+    62.49% {
+        top: 440px;
+        width: 32px;
+        background-position: -195px -3px;
     }
-    79.999% {
-        width: 34px;
-        background-position: -231px 0px;
+    62.5% {
+        top: 440px;
+        width: 32px;
+        background-position: -231px -3px;
     }
-    80% {
-        width: 34px;
-        background-position: -268px 0px;
+    74.99% {
+        top: 440px;
+        width: 32px;
+        background-position: -231px -3px;
     }
-    99.999% {
-        width: 34px;
-        background-position: -268px 0px;
+    75% {
+        top: 440px;
+        width: 32px;
+        background-position: -268px -3px;
+    }
+    87.49% {
+        top: 440px;
+        width: 32px;
+        background-position: -268px -3px;
+    }
+    87.5% {
+        top: 440px;
+        width: 32px;
+        background-position: -305px -3px;
+    }
+    99.99% {
+        top: 440px;
+        width: 32px;
+        background-position: -305px -3px;
     }
     100% {
-        width: 34px;
-        background-position: -305px 0px;
+        top: 440px;
+        width: 32px;
+        background-position: -268px -3px;
     }
 }
 
 @keyframes run {
     0% {
-        width: 20px;
-        background-position: -103px -111px;
-    }
-    9.999%{
-        width: 20px;
-        background-position: -103px -111px;
-    }
-    10%{
-        width: 24px;
-        background-position: -127px -111px;
-    }
-    19.999%{
-        width: 24px;
-        background-position: -127px -111px;
-    }
-    20%{
-        width: 32px;
-        background-position: -155px -111px;
-    }
-    29.999%{
-        width: 32px;
-        background-position: -155px -111px;
-    }
-    30%{
-        width: 34px;
-        background-position: -192px -111px;
-    }
-    39.999%{
-        width: 34px;
-        background-position: -192px -111px;
-    }
-    40%{
-        width: 26px;
-        background-position: -232px -111px;
-    }
-    49.999%{
-        width: 26px;
-        background-position: -232px -111px;
-    }
-    50%{
+        top: 452px;
         width: 22px;
-        background-position: -265px -111px;
+        height: 44px;
+        background-position: -102px -109px;
     }
-    59.999%{
+    9.99% {
+        top: 452px;
         width: 22px;
-        background-position: -265px -111px;
+        height: 44px;
+        background-position: -102px -109px;
     }
-    60%{
+    10% {
+        top: 452px;
         width: 25px;
-        background-position: -292px -111px;
+        height: 44px;
+        background-position: -126px -109px;
     }
-    69.999%{
+    19.99% {
+        top: 452px;
         width: 25px;
-        background-position: -292px -111px;
+        height: 44px;
+        background-position: -126px -109px;
     }
-    70%{
-        width: 30px;
-        background-position: -323px -111px;
-    }
-    79.999%{
-        width: 30px;
-        background-position: -323px -111px;
-    }
-    80%{
+    20% {
+        top: 452px;
         width: 34px;
-        background-position: -359px -111px;
+        height: 44px;
+        background-position: -154px -109px;
     }
-    89.999%{
+    29.99% {
+        top: 452px;
         width: 34px;
-        background-position: -359px -111px;
+        height: 44px;
+        background-position: -154px -109px;
     }
-    90%{
-        width: 29px;
-        background-position: -398px -111px;
+    30% {
+        top: 452px;
+        width: 36px;
+        height: 44px;
+        background-position: -191px -108px;
     }
-    100%{
+    39.99% {
+        top: 452px;
+        width: 36px;
+        height: 44px;
+        background-position: -191px -108px;
+    }
+    40% {
+        top: 452px;
+        width: 28px;
+        height: 44px;
+        background-position: -231px -108px;
+    }
+    49.99% {
+        top: 452px;
+        width: 28px;
+        height: 44px;
+        background-position: -231px -108px;
+    }
+    50% {
+        top: 452px;
+        width: 24px;
+        height: 44px;
+        background-position: -264px -108px;
+    }
+    59.99% {
+        top: 452px;
+        width: 24px;
+        height: 44px;
+        background-position: -264px -108px;
+    }
+    60% {
+        top: 454px;
+        width: 27px;
+        height: 43px;
+        background-position: -291px -109px;
+    }
+    69.99% {
+        top: 454px;
+        width: 27px;
+        height: 43px;
+        background-position: -291px -109px;
+    }
+    70% {
+        top: 452px;
+        width: 32px;
+        height: 44px;
+        background-position: -322px -109px;
+    }
+    79.99% {
+        top: 452px;
+        width: 32px;
+        height: 44px;
+        background-position: -322px -109px;
+    }
+    80% {
+        top: 452px;
+        width: 36px;
+        height: 44px;
+        background-position: -358px -109px;
+    }
+    89.99% {
+        top: 452px;
+        width: 36px;
+        height: 44px;
+        background-position: -358px -109px;
+    }
+    90% {
+        top: 452px;
+        width: 31px;
+        height: 44px;
+        background-position: -397px -109px;
+    }
+    100% {
+        top: 452px;
+        width: 31px;
+        height: 44px;
+        background-position: -397px -109px;
+    }
+}
+
+@keyframes jump {
+    0% {
+        top: 439px;
+        width: 26px;
+        height: 50px;
+        background-position: -174px -59px;
+    }
+    14.99% {
+        top: 439px;
+        width: 26px;
+        height: 50px;
+        background-position: -174px -59px;
+    }
+    15% {
+        top: 434px;
+        width: 21px;
+        height: 50px;
+        background-position: -204px -59px;
+    }
+    29.99% {
+        top: 434px;
+        width: 21px;
+        height: 50px;
+        background-position: -204px -59px;
+    }
+    30% {
+        top: 429px;
+        width: 21px;
+        height: 50px;
+        background-position: -231px -59px;
+    }
+    44.99% {
+        top: 429px;
+        width: 21px;
+        height: 50px;
+        background-position: -231px -59px;
+    }
+    45% {
+        top: 424px;
+        width: 25px;
+        height: 50px;
+        background-position: -256px -59px;
+    }
+    69.99% {
+        top: 424px;
+        width: 25px;
+        height: 50px;
+        background-position: -256px -59px;
+    }
+    70% {
+        top: 419px;
         width: 29px;
-        background-position: -398px -111px;
-    }}
+        height: 50px;
+        background-position: -286px -60px;
+    }
+    84.99% {
+        top: 419px;
+        width: 29px;
+        height: 50px;
+        background-position: -286px -60px;
+    }
+    85% {
+        top: 424px;
+        width: 27px;
+        height: 50px;
+        background-position: -321px -60px;
+    }
+    99.99% {
+        top: 424px;
+        width: 27px;
+        height: 50px;
+        background-position: -321px -60px;
+    }
+    100% {
+        top: 439px;
+        width: 32px;
+        height: 50px;
+        background-position: -349px -60px;
+    }
+}

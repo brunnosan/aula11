@@ -13,30 +13,100 @@
     <div id="mega" class="start"></div>
 </body>
 <script>
-    evento = 'start';
-    addEventListener('keyup', (e) => {
-        if(e.key === 'ArrowRight') {
-            mega.classList.remove(evento);
-            back.classList.remove(evento);
-            evento='runRight';
-            back.classList.add(evento)
+    evento = 'stopRight';
+    addEventListener('DOMContentLoaded', (l) => {
+        setTimeout(() => {
+            mega.classList.remove(mega.className);
+            back.classList.remove(back.className);
             mega.classList.add(evento);
+            back.classList.add(evento);
+        }, 1000);
+        return;
+    })
+    addEventListener('keyup', (e) => {
+        if(e.key === 'Escape') {
+            mega.classList.remove(mega.className);
+            back.classList.remove(back.className);
+            evento='start';
+            mega.classList.add(evento);
+            back.classList.add(evento);
+            return;
+        }
+        if(e.key === 'ArrowRight') {
+            if ((mega.className==='jumpRight') || (mega.className==='jumpLeft')) {
+                return;
+            }
+            mega.classList.remove(mega.className);
+            back.classList.remove(back.className);
+            evento='runRight';
+            mega.classList.add(evento);
+            back.classList.add(evento)
             return;
         }
         if(e.key === 'ArrowLeft') {
-            mega.classList.remove(evento);
-            back.classList.remove(evento);
+            if ((mega.className==='jumpRight') || (mega.className==='jumpLeft')) {
+                return;
+            }
+            mega.classList.remove(mega.className);
+            back.classList.remove(back.className);
             evento='runLeft';
-            back.classList.add(evento);
             mega.classList.add(evento);
+            back.classList.add(evento);
+            return;
+        }
+        if(e.key === 'ArrowUp') {
+            if ((mega.className==='jumpRight') || (mega.className==='jumpLeft')) {
+                return;
+            }
+            evento=mega.className;
+            eventoJump='';
+            mega.classList.remove(mega.className);
+            switch (evento) {
+                case 'runRight':
+                case 'stopRight':
+                    eventoJump='jumpRight';
+                    break;
+            
+                case 'runLeft':
+                case 'stopLeft':
+                    eventoJump='jumpLeft';
+                    break;
+            
+                default:
+                    eventoJump='jumpRight';
+                    break;
+            }
+            mega.classList.add(eventoJump);
+            setTimeout(() => {
+                mega.classList.remove(eventoJump);
+                mega.classList.add(evento);
+            }, 1000);
             return;
         }
         if(e.key === ' ') {
-            mega.classList.remove(evento);
-            back.classList.remove(evento);
-            evento='start';
-            back.classList.add(evento);
+            if ((mega.className==='jumpRight') || (mega.className==='jumpLeft')) {
+                return;
+            }
+            evento=mega.className;
+            mega.classList.remove(mega.className);
+            back.classList.remove(back.className);
+            switch (evento) {
+                case 'runRight':
+                case 'stopRight':
+                    evento='stopRight';
+                    break;
+            
+                case 'runLeft':
+                case 'stopLeft':
+                    evento='stopLeft';
+                    break;
+            
+                default:
+                    evento='stopRight';
+                    break;
+            }
             mega.classList.add(evento);
+            back.classList.add(evento);
             return;
         }
     })
