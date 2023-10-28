@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 11</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/back.css">
     <link rel="stylesheet" href="css/megaman.css">
 </head>
 <body>
+    <div id="instructions">
+        <h2>Instruções</h2>
+        <p>
+            Reiniciar: Esc<br>
+            Direções: <br>
+            <i class="fa-solid fa-up-long"></i><br>
+            <i class="fa-solid fa-left-long"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-right-long"></i><br>
+            <i class="fa-solid fa-down-long"></i><br>
+        </p>
+    </div>
     <div id="back" class="start"></div>
     <div id="mega" class="start"></div>
 </body>
@@ -83,7 +94,7 @@
             }, 1000);
             return;
         }
-        if(e.key === ' ') {
+        if(e.key === 'ArrowDown') {
             if ((mega.className==='jumpRight') || (mega.className==='jumpLeft')) {
                 return;
             }
