@@ -13,14 +13,14 @@
     top: 440px;
     width: 32px;
     height: 50px;
-    background-position: -268px -3px;
+    background-position: -231px -3px;
 }
 
 #mega.stopLeft {
     top: 440px;
     width: 32px;
     height: 50px;
-    background-position: -268px -3px;
+    background-position: -231px -3px;
     transform: scale(-3,3);
 }
 
@@ -70,81 +70,115 @@
     transform: scale(-3,3);
 }
 
+#mega.dashRight {
+    top: 452px;
+    width: 30px;
+    height: 44px;
+    background-position: -290px -159px;
+    animation: dash linear 1 500ms;
+    animation-fill-mode: forwards;
+}
+
+#mega.dashLeft {
+    top: 452px;
+    width: 30px;
+    height: 44px;
+    background-position: -290px -159px;
+    animation: dash linear 1 500ms;
+    animation-fill-mode: forwards;
+    transform: scale(-3,3);
+}
+
 @keyframes start {
     0% {
         top: 240px;
         width: 10px;
+        height: 50px;
         background-position: -151px -3px;
     }
     12.5% {
         top: 340px;
         width: 10px;
+        height: 50px;
         background-position: -151px -3px;
     }
     25% {
         top: 440px;
         width: 10px;
+        height: 50px;
         background-position: -151px -3px;
     }
     37.49% {
         top: 440px;
         width: 10px;
+        height: 50px;
         background-position: -151px -3px;
     }
     37.5% {
         top: 440px;
         width: 24px;
+        height: 50px;
         background-position: -167px -3px;
     }
     49.99% {
         top: 440px;
         width: 24px;
+        height: 50px;
         background-position: -167px -3px;
     }
     50% {
         top: 440px;
         width: 32px;
+        height: 50px;
         background-position: -195px -3px;
     }
     62.49% {
         top: 440px;
         width: 32px;
+        height: 50px;
         background-position: -195px -3px;
     }
     62.5% {
         top: 440px;
         width: 32px;
+        height: 50px;
         background-position: -231px -3px;
     }
     74.99% {
         top: 440px;
         width: 32px;
+        height: 50px;
         background-position: -231px -3px;
     }
     75% {
         top: 440px;
         width: 32px;
+        height: 50px;
         background-position: -268px -3px;
     }
     87.49% {
         top: 440px;
         width: 32px;
+        height: 50px;
         background-position: -268px -3px;
     }
     87.5% {
         top: 440px;
         width: 32px;
+        height: 50px;
         background-position: -305px -3px;
     }
     99.99% {
         top: 440px;
         width: 32px;
+        height: 50px;
         background-position: -305px -3px;
     }
     100% {
         top: 440px;
         width: 32px;
-        background-position: -268px -3px;
+        height: 50px;
+        background-position: -231px -3px;
     }
 }
 
@@ -350,4 +384,37 @@
         height: 50px;
         background-position: -349px -60px;
     }
+}
+
+@keyframes dash {
+    0% {
+        top: 452px;
+        width: 30px;
+        height: 44px;
+        background-position: -290px -159px;        
+    }
+    19.99% {
+        top: 452px;
+        width: 30px;
+        height: 44px;
+        background-position: -290px -159px;        
+    }
+    20% {
+        top: 452px;
+        width: 40px;
+        height: 44px;
+        background-position: -322px -159px;     
+    }
+    99.99% {
+        top: 452px;
+        width: 40px;
+        height: 44px;
+        background-position: -322px -159px;     
+    }
+    100% {
+        top: 440px;
+        width: 32px;
+        height: 50px;
+        background-position: -231px -3px;
+   }
 }
