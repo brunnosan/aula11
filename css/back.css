@@ -10,18 +10,22 @@
     left: 0;
     background-image: url('../images/stage.jpg');
     /* background-size: contain; */
+    transform: scale(1,1);
 }
 
 #back.stopRight {
     animation: none;
+    transform: scale(1,1);
 }
 
 #back.stopLeft {
     animation: none;
+    transform: scale(-1,1);
 }
 
 #back.start {
     animation: none;
+    transform: scale(1,1);
 }
 
 #back.runRight {
@@ -34,6 +38,16 @@
     transform: scale(1,1);
 }
 
+#back.dashRight {
+    animation: dashBack linear 1 500ms;
+    transform: scale(-1,1);
+}
+
+#back.dashLeft {
+    animation: dashBack linear 1 500ms;
+    transform: scale(1,1);
+}
+
 @keyframes runBack {
     0% {
         background-position: 25% 0;
@@ -43,5 +57,17 @@
     }
     100% {
         background-position: 75% 0px;
+    }
+}
+
+@keyframes dashBack {
+    0% {
+        background-position: 50% 0;
+    }
+    50% {
+        background-position: 75% 0px;
+    }
+    100% {
+        background-position: 100% 0px;
     }
 }

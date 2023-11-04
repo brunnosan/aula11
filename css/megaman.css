@@ -14,6 +14,7 @@
     width: 32px;
     height: 50px;
     background-position: -231px -3px;
+    transform: scale(3,3);
 }
 
 #mega.stopLeft {
@@ -30,6 +31,7 @@
     background-position: -151px -3px;
     animation: start linear 1 750ms;
     animation-fill-mode: forwards;
+    transform: scale(3,3);
 }
 
 #mega.runRight {
@@ -39,6 +41,7 @@
     background-position: -102px -109px;
     animation: run linear infinite 1000ms;
     animation-fill-mode: forwards;
+    transform: scale(3,3);
 }
 
 #mega.runLeft {
@@ -58,6 +61,7 @@
     background-position: -174px -59px;
     animation: jump linear 1 1000ms;
     animation-fill-mode: forwards;
+    transform: scale(3,3);
 }
 
 #mega.jumpLeft {
@@ -77,6 +81,7 @@
     background-position: -290px -159px;
     animation: dash linear 1 500ms;
     animation-fill-mode: forwards;
+    transform: scale(3,3);
 }
 
 #mega.dashLeft {
